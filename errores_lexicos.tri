@@ -1,0 +1,14 @@
+ok_id = 10
+bad$char = 20
+name = "open_string
+# La arroba @ es delimitador valido en este scanner
+other = @@@
+# Varios caracteres ASCII no admitidos en una sola linea
+varios_errores = 1$2`3\4{5};6?7!8
+# errores sueltos 
+mal_grave = x`y
+mal_barra = p\q
+mal_llaves = a{b}c
+Prueba_puntoycoma = u;v
+mal_interrog = si?no
+mal_exclam = al!to

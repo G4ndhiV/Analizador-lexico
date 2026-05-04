@@ -1,0 +1,16 @@
+# Usuarios y inicios de sesion: literales, floats, cadena sin cerrar y simbolos no validos
+id_usuario = 42
+mensaje_ok = "sesion iniciada"
+mensaje_corto = 'cerrar sesion'
+nota_sin_cerrar = "registro de acceso incompleto
+tiempo_s = 0.25
+version_min = .5
+limite_api = 10e+2
+buffer = n<<=2
+datos = sesion->usuario
+correo_mal = admin@local
+etiqueta = #no_es_comentario_aqui
+total_mal = base$extra
+intentos =    7
+if id_usuario >= 10:
+    return "fin"

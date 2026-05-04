@@ -1,0 +1,5 @@
+.DS_Store
+lex.yy.c
+*.o
+lexico_equipo_11_scanner
+scanner
