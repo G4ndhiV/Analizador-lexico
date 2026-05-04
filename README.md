@@ -2,10 +2,6 @@
 
 Scanner con `lex` / `flex`. Los fuentes (`.l`, `.tri`) están en la raíz de este repo.
 
-## Para qué sirve `.gitignore`
-
-Le dice a **Git** qué archivos **no** subir al repositorio: generados (como `lex.yy.c`), binarios del compilador y basura del sistema (`.DS_Store`). Así el repo solo lleva lo que importa para compilar de nuevo en cualquier máquina.
-
 ## Cómo correrlo
 
 1. Genera el C desde el archivo Lex:
