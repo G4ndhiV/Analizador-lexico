@@ -1,5 +1,5 @@
 ok_id = 10
-bad$char = 20
+$badchar = 20
 name = "open_string
 # La arroba @ es delimitador valido en este scanner
 other = @@@
@@ -12,3 +12,9 @@ mal_llaves = a{b}c
 Prueba_puntoycoma = u;v
 mal_interrog = si?no
 mal_exclam = al!to
+if (5 > ok_id):
+    return True
+elif (5 <= ok_id):
+    return False
+else:
+    return ok_id

@@ -55,6 +55,8 @@ static void print_symbol_tables(void);
 LETTER          [a-zA-Z_]
 DIGIT           [0-9]
 ID              [a-zA-Z_][a-zA-Z0-9_]*
+BAD_ID_CHAR     [$`\\?!]
+BAD_ID          ([a-zA-Z0-9_]+{BAD_ID_CHAR}+([a-zA-Z0-9_]|{BAD_ID_CHAR})*|{BAD_ID_CHAR}+[a-zA-Z0-9_]([a-zA-Z0-9_]|{BAD_ID_CHAR})*)
 INT             {DIGIT}+
 FLOAT           ({DIGIT}*\.{DIGIT}+([eE][+-]?{DIGIT}+)?|{DIGIT}+[eE][+-]?{DIGIT}+)
 STRING          \"[^\"\n]*\"|\'[^\'\n]*\'
@@ -97,6 +99,13 @@ DELIMITER       [()\[\]{}.,;:@]|"->"
 {STRING_UNCLOSED_EOF} {
     fprintf(stderr,
             "LEXICAL_ERROR: token_id=<%d> line=%d lexeme=\"%s\" (cadena sin cerrar al EOF)\n",
+            TOKEN_ERROR, line_no, yytext);
+}
+
+{BAD_ID} {
+    /* Identificador con caracteres invalidos en medio: un solo error lexico. */
+    fprintf(stderr,
+            "LEXICAL_ERROR: token_id=<%d> line=%d lexeme=\"%s\" (identificador con caracteres invalidos)\n",
             TOKEN_ERROR, line_no, yytext);
 }
 
